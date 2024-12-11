@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="assignment.css">
+</head>
+    <body>
+        <h1 style="text-align: center;">To-Do List</h1>
+        <div>
+            <label>Add an Item: </label>
+            <input type="text" id="add-box">
+            <button onclick="addToList()">Add To List</button>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Selected Element: </label>
+            <input type="text" id="selected-box" disabled>
+            <button onclick="deleteElementList()">Delete</button>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Edit Selection: </label>
+            <input type="text" id="edit-box">
+            <button onclick="editElementList()">Submit</button>
+        </div>
+
+        <hr>
+
+        <p>Select an Item:</p>
+        <ul id="myUL">
+        </ul>
+
+        <script src="assignment-script.js"></script>
+    </body>
+</html>

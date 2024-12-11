@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Demo</title>
+    <script src="myscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+    <body>
+        <h1>Hello Javascript</h1>
+        <hr>
+
+        <div class="div-number">
+            <p>Number: </p>
+            <p id="num">0</p>
+            <button onclick="buttonClick()">Click Me</button>
+
+            <div id="select-container">
+                <label>Select Critical Point:</label>
+                <select id="select-critical" name="critical" onchange="changeCritical(this.value)">
+                    <option value="10" selected>10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+
+            <div id="radio-container">
+                <label>Select Critical Color: </label>
+                <input type="radio" name="color_option" value="0" onchange="changeCriticalColorManual(this.value)" checked> Red
+                <input type="radio" name="color_option" value="1" onchange="changeCriticalColorManual(this.value)"> Pink
+                <input type="radio" name="color_option" value="2" onchange="changeCriticalColorManual(this.value)"> Purple
+                <input type="radio" name="color_option" value="3" onchange="changeCriticalColorManual(this.value)"> Teal
+            </div>
+        </div>
+    </body>
+</html>

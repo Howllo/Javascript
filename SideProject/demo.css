@@ -1,0 +1,38 @@
+.counter-text-zero {
+    color: red;
+}
+
+.counter-text-one {
+    color: rgb(255, 145, 167);
+}
+
+.counter-text-two {
+    color: purple;
+}
+
+.counter-text-three {
+    color: teal;
+}
+
+h1 {
+    text-align: center;
+}
+
+.div-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#select-container {
+    margin: 20px;
+}
+
+#radio-container {
+    margin-bottom: 20px;
+}
+
+.num {
+    margin-top: 10px;
+}

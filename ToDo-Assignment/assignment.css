@@ -1,0 +1,9 @@
+.unselect {
+    color: black;
+}
+
+.select {
+    color: crimson;
+    border: 5px;
+    border-color: aqua;
+}
