@@ -1,0 +1,18 @@
+.child-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 1px;
+}
+
+.post-name {
+    border: 2px solid red;
+    padding: 5px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 2%;
+}
+
+.child-comment {
+    border: 1.5px solid black;
+    margin: 5%;
+}
