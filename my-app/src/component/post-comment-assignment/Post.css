@@ -16,3 +16,11 @@
     border: 1.5px solid black;
     margin: 5%;
 }
+
+h2 {
+    margin-bottom: 3px;
+}
+
+hr {
+    margin-bottom: 5px;
+}

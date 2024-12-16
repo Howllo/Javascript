@@ -1,15 +1,15 @@
-import "./Post.css"
-import Comment from "./Comment"
+import "./ListAndKeysComponent.css"
 import { useState } from "react"
+import ListAndKey_Key from "./ListAndKey_Key";
 
-const Post = () => {
-    const [posts] = useState ([
+const ListAndKeysComponent = () => {
+    const [posts, setPosts] = useState ([
         { title: "Testing new Blog", body: 'Lorem ipsumium...', author: 'Fatima', id: 1},
         { title: "Testing Boo", body: 'Lorem...', author: 'Natia', id: 2},
         { title: "Boo", body: 'Lorem IPSUM...', author: 'Jessie', id: 3},
     ]);
 
-    const [comments] = useState([
+    const [comments, setComments] = useState([
         { body: 'That Interest!', author: 'Ma', id: 1, postId: 1},
         { body: 'Never knew...', author: 'Mia', id: 2, postId: 1},
         { body: 'Lorem...', author: 'Dia', id: 3, postId: 1},
@@ -21,8 +21,14 @@ const Post = () => {
         { body: 'Curses', author: 'Ceasar', id: 9, postId: 3},
     ])
 
+    const handleDeleteComment = (id) =>{
+        const newComment = comments.filter(comment=>comment.id !== id);
+        setComments(newComment);
+    }
+
     return (
         <div className="grid-container">
+              <h2>List and Keys</h2>
             {
                 posts.map(post =>{
                     const randomDays = Math.floor(Math.random() * 300) + 1;
@@ -36,7 +42,7 @@ const Post = () => {
                             <p>- {post.author}</p>
                             <p>{date.toLocaleDateString()}</p>
                             <hr className="post-br"></hr>
-                            <Comment id={post.id} comments={comments}/>
+                            <ListAndKey_Key id={post.id} comments={comments} handleDelete={handleDeleteComment}/>
                         </div>
                     )
                 })
@@ -45,4 +51,4 @@ const Post = () => {
     )
 }
 
-export default Post;
+export default ListAndKeysComponent;
