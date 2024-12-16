@@ -3,24 +3,26 @@ import axios from "axios";
 import DisplayPost from "./DisplayPost";
 
 const AxiosGetDemo = () => {
-    const [posts, setPosts]=useState([])
+    const [posts, setPosts] = useState([])
 
-    const [newPosts, setNewPosts] = useState ([
-        { title: "Testing new Blog", body: 'Lorem ipsumium...', userId:1, id: 1},
-        { title: "Testing Boo", body: 'Lorem...', author: 'Natia', id: 2},
-        { title: "Boo", body: 'Lorem IPSUM...', author: 'Jessie', id: 3},
-    ]);
+    const newPosts = [
+        { userId: 1, id: "1", title: "Testing new Blog", body: 'Lorem ipsumium...'},
+        { userId: 2, id: "2", title: "Testing Boo", body: 'Lorem...'},
+        { userId: 3, id: "3", title: "Boo", body: 'Lorem IPSUM...'},
+    ];
 
     useEffect(()=> {
-        axios.get("http://localhost:8000/posts")
-            .then(res =>{
-                setPosts(res.data);
-            })
+        newPosts.map(post =>{
+            axios.post("http://localhost:8000/post", post );
+        })
     },[])
 
     useEffect(()=> {
-        axios.post("http://localhost:8000/posts", { })
-            .then()
+        axios.get("http://localhost:8000/post")
+            .then(res =>{
+                console.log(res.data)
+                setPosts(res.data);
+            })
     },[])
     
     return (
