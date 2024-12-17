@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import DisplayPost from "./DisplayPost";
 
-
 const AxiosGetDemo = () => {
     const [posts, setPosts] = useState([])
 
