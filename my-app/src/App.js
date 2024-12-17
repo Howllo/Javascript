@@ -1,7 +1,7 @@
 import './App.css';
 import EventDemoComponent from './component/EventDemo/EventDemoComponent';
 import Hello from './component/Hello/hello';
-import React, { useState } from 'react';
+import React from 'react';
 import StateDemoComponent from './component/StateDemo/StateDemoComponent';
 import Post from './component/post-comment-assignment/Post';
 import ListAndKeysComponent from './component/ListAndKey/ListAndKeysComponent';
