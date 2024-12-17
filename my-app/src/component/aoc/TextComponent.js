@@ -7,4 +7,4 @@ const TextComponent = () => {
 }
 
 
-export default TextComponent(TextComponent);
+export default withFancyText(TextComponent);

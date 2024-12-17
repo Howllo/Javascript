@@ -9,26 +9,34 @@ import AxiosGetDemo from './component/Axios-assignment/AxiosGetDemo';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './component/Navbar/Navbar';
 import ToDoList from './component/todolist/ToDoList';
+import RefDemo from './component/RefsDemo/RefDemo';
+import ControlDemo from './component/Control/ControlDemo';
+import MyContext from './component/ContextDemo/MyContext';
 
 function App() {
-  let message = "Hello React Again!";
+  const sharedData = 'This is some shared data.'
+
   return (
-    <div className="App">
-      <Router>
-        <div className='app'>
-          <Navbar/>
-        </div>
-        <Routes>
-          <Route path='/' element={<Hello firstname = "Tony" lastname="Hardiman"/>}/>
-          <Route path='/sdc' element={<StateDemoComponent/>}/>
-          <Route path='/edc' element={<EventDemoComponent/>}/>
-          <Route path='/axios' element={<AxiosGetDemo/>}/>
-          <Route path='/post-assignment' element={<Post/>}/>
-          <Route path='/list-and-key' element={<ListAndKeysComponent/>}/>
-          <Route path='/todo' element={<ToDoList/>}/>
-        </Routes>
-      </Router>
-    </div>
+    <MyContext.Provider value={sharedData}>
+      <div className="App">
+        <Router>
+          <div className='app'>
+            <Navbar/>
+          </div>
+          <Routes>
+            <Route path='/' element={<Hello firstname = "Tony" lastname="Hardiman"/>}/>
+            <Route path='/sdc' element={<StateDemoComponent/>}/>
+            <Route path='/edc' element={<EventDemoComponent/>}/>
+            <Route path='/axios' element={<AxiosGetDemo/>}/>
+            <Route path='/post-assignment' element={<Post/>}/>
+            <Route path='/list-and-key' element={<ListAndKeysComponent/>}/>
+            <Route path='/todo' element={<ToDoList/>}/>
+            <Route path='/ref' element={<RefDemo/>}/>
+            <Route path='/control' element={<ControlDemo/>}/>
+          </Routes>
+        </Router>
+      </div>
+    </MyContext.Provider>
   );
 }
 
